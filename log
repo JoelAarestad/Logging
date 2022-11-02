@@ -1,0 +1,9 @@
+#!/bin/bash
+while true
+do
+#read 3 numbers and print the largest number
+echo "Enter [exercise] [weight] [reps]"
+read a b c
+
+echo $a $b $c $(date) >> Logs
+done
