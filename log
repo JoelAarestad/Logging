@@ -1,4 +1,7 @@
 #!/bin/bash
+
+#be sure to type in source log before typing in this function
+log(){
 while true
 do
 #read 3 numbers and print the largest number
@@ -7,3 +10,4 @@ read a b c
 
 echo $a $b $c $(date) >> Logs
 done
+}
