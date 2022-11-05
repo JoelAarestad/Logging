@@ -11,3 +11,8 @@ read a b c
 echo $a $b $c $(date) >> PROGRESS.log
 done
 }
+
+undo(){
+#remove the last line of the file
+sed -i '$d' PROGRESS.log 
+}
