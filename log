@@ -8,6 +8,6 @@ do
 echo "Enter [exercise] [weight] [reps]"
 read a b c
 
-echo $a $b $c $(date) >> Logs
+echo $a $b $c $(date) >> PROGRESS.log
 done
 }
