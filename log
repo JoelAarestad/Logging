@@ -1,13 +1,20 @@
 #!/bin/bash
 
 #be sure to type in source log before typing in this function
+
+
+show(){
+#show all the lines in the file Exercises that have the word Leg in it
+    grep $1 Exercises
+
+}
+
 log(){
 while true
 do
 #read 3 numbers and print the largest number
 echo "Enter [exercise] [weight] [reps]"
 read a b c
-
 echo $a $b $c $(date) >> PROGRESS.log
 done
 }
