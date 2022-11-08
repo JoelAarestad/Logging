@@ -6,16 +6,29 @@
 show(){
 #show all the lines in the file Exercises that have the word Leg in it
     grep $1 Exercises
-
 }
 
 log(){
+    #put the line in the file Exercises that has the $1 value in it into a variable
+    var=$(show $1)
+    
+    #echo var without the number infront of it
+
+
 while true
 do
+echo $var
 #read 3 numbers and print the largest number
-echo "Enter [exercise] [weight] [reps]"
-read a b c
-echo $a $b $c $(date) >> PROGRESS.log
+echo "Enter [weight] [reps]"
+read b c
+#if b or c is not a number then break
+if ! [[ $b =~ ^[0-9]+$ ]] || ! [[ $c =~ ^[0-9]+$ ]]
+    then
+    break
+fi
+
+
+echo ${var:3} $b $c $(date) >> PROGRESS.log
 done
 }
 
