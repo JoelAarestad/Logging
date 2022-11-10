@@ -5,16 +5,16 @@
 
 show(){
 #show all the lines in the file Exercises that have the word Leg in it
+    clear
     grep $1 Exercises
 }
 
 log(){
+    clear
     #put the line in the file Exercises that has the $1 value in it into a variable
     var=$(show $1)
     
     #echo var without the number infront of it
-
-
 while true
 do
 echo $var
