@@ -10,14 +10,14 @@ show(){
 }
 
 log(){
-    clear
-    #put the line in the file Exercises that has the $1 value in it into a variable
-    var=$(show $1)
     
+    #put the line in the file Exercises that has the $1 value in it into a variable
+    var=$1
+    echo $var
     #echo var without the number infront of it
 while true
 do
-echo $var
+ 
 #read 3 numbers and print the largest number
 echo "Enter [weight] [reps]"
 read b c
@@ -27,8 +27,8 @@ if ! [[ $b =~ ^[0-9]+$ ]] || ! [[ $c =~ ^[0-9]+$ ]]
     break
 fi
 
-
-echo ${var:3} $b $c $(date) >> PROGRESS.log
+#echo the line without any numbers in it 
+echo $1, $b, $c, $(date) >> PROGRESS.log
 done
 }
 
