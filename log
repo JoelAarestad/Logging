@@ -15,11 +15,12 @@ log(){
     var=$1
     echo $var
     #echo var without the number infront of it
+    echo "Enter [weight] [reps]"
 while true
 do
  
 #read 3 numbers and print the largest number
-echo "Enter [weight] [reps]"
+ 
 read b c
 #if b or c is not a number then break
 if ! [[ $b =~ ^[0-9]+$ ]] || ! [[ $c =~ ^[0-9]+$ ]]
