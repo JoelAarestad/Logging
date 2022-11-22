@@ -1,39 +1,33 @@
 #!/bin/bash
 
 #be sure to type in source log before typing in this function
-
-
 show(){
-#show all the lines in the file Exercises that have the word Leg in it
+    #show all the lines in the file Exercises that have the word Leg in it
     clear
     grep $1 Exercises
 }
 
 log(){
-    
     #put the line in the file Exercises that has the $1 value in it into a variable
     var=$1
     echo $var
     #echo var without the number infront of it
     echo "Enter [weight] [reps]"
-while true
-do
- 
-#read 3 numbers and print the largest number
- 
-read b c
-#if b or c is not a number then break
-if ! [[ $b =~ ^[0-9]+$ ]] || ! [[ $c =~ ^[0-9]+$ ]]
-    then
-    break
-fi
-
-#echo the line without any numbers in it 
-echo $1, $b, $c, $(date) >> PROGRESS.log
-done
+    while true
+    do
+        #read 3 numbers and print the largest number
+        read b c
+        #if b or c is not a number then break
+        if ! [[ $b =~ ^[0-9]+$ ]] || ! [[ $c =~ ^[0-9]+$ ]]
+            then
+            break
+        fi
+        #echo the line without any numbers in it 
+        echo $1, $b, $c, $(date) >> PROGRESS.log
+    done
 }
 
 undo(){
-#remove the last line of the file
-sed -i '$d' PROGRESS.log 
+    #remove the last line of the file
+    sed -i '$d' PROGRESS.log 
 }
