@@ -4,7 +4,8 @@
 show(){
     #show all the lines in the file Exercises that have the word Leg in it
     clear
-    grep $1 Exercises
+    #have a regex search for words that start with the letter A in PROGRESS.log
+
 }
 
 log(){
@@ -23,7 +24,7 @@ log(){
             break
         fi
         #echo the line without any numbers in it 
-        echo $1, $b, $c, $(date) >> PROGRESS.log
+        echo $1, $b, $c, $(date '+%m-%d-%Y') >> PROGRESS.log
     done
 }
 
