@@ -5,6 +5,7 @@ show(){
     #show all the lines in the file Exercises that have the word Leg in it
     clear
     #have a regex search for words that start with the letter A in PROGRESS.log
+    grep $1 PROGRESS.log
 
 }
 
