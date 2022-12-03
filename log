@@ -1,11 +1,13 @@
 #!/bin/bash
 
 #be sure to type in source log before typing in this function
-show(){
+
+
+find(){
     #show all the lines in the file Exercises that have the word Leg in it
     clear
     #have a regex search for words that start with the letter A in PROGRESS.log
-    grep $1 PROGRESS.log
+    grep $1 prog.log
 
 }
 
@@ -25,11 +27,11 @@ log(){
             break
         fi
         #echo the line without any numbers in it 
-        echo $1, $b, $c, $(date '+%m-%d-%Y') >> PROGRESS.log
+        echo $1, $b, $c, $(date '+%m-%d-%Y') >> prog.log
     done
 }
 
 undo(){
     #remove the last line of the file
-    sed -i '$d' PROGRESS.log 
+    sed -i '$d' prog.log
 }
