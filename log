@@ -35,3 +35,11 @@ undo(){
     #remove the last line of the file
     sed -i '$d' prog.log
 }
+
+
+compress(){
+    #give test.py executable permissions
+    chmod +x test.py
+    #run test.py
+    ./test.py
+}

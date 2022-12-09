@@ -1,10 +1,8 @@
-#read through the file prog.log
-
+#!/usr/bin/env python3
 with open('prog.log') as f:
     lines = f.readlines()
     #Find the second feild in each li
     for line in lines:
-        
         #count how many times a line is repeated in a dictionary
         number_of_times = {}
         for line in lines:
