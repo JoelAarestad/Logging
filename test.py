@@ -14,11 +14,7 @@ with open('prog.log') as f:
         #create a new file called prog2.log that shows the items in the dictionary and then the number of times they are repeated
         
                 
-        with open('prog2.log', 'w') as f:
-            for line in number_of_times:
-                #f.write(f'{str(number_of_times[line])} {line}')
-                
+        with open('staged', 'w') as f:
+            for line in number_of_times:                
                 chunks = line.split(', ')
                 f.write(f'{chunks[0]}, {chunks[1]}, {str(number_of_times[line])}x{chunks[2]}, {chunks[3]}')  
-            #print(str(number_of_times[line]))
-            
