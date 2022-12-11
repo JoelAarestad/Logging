@@ -2,6 +2,17 @@
 
 #be sure to type in source log before typing in this function
 
+info(){
+    #show all the lines in the file Exercises that have the word Leg in it
+    clear
+    #echo what each function does
+    echo "log [exercise]    logs the exercise and the weight and reps"
+    echo "find [arg]        grep for the arg in the staged file"
+    echo "undo              undo the last log"
+    echo "compress          converts prog.log into the staged file"
+
+}
+
 
 find(){
     #show all the lines in the file Exercises that have the word Leg in it
